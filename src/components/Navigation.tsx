@@ -12,8 +12,8 @@ export const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="text-2xl font-bold bg-gradient-cosmic bg-clip-text text-transparent">
-            Akshith
+          <div className="text-2xl font-bold bg-gradient-cosmic bg-clip-text text-transparent drop-shadow-lg hover-scale">
+            MyPortfolio
           </div>
 
           {/* Navigation Links */}

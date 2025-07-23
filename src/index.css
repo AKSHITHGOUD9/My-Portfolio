@@ -87,3 +87,39 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+  
+  .hover-glow {
+    @apply transition-all duration-300 hover:drop-shadow-glow-primary;
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 10px hsl(var(--primary) / 0.5);
+  }
+  
+  .bg-glow {
+    @apply relative;
+  }
+  
+  .bg-glow::before {
+    content: '';
+    @apply absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300;
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--accent) / 0.1));
+  }
+  
+  .bg-glow:hover::before {
+    @apply opacity-100;
+  }
+  
+  .drop-shadow-glow-primary {
+    filter: drop-shadow(0 0 8px hsl(var(--primary) / 0.6));
+  }
+  
+  .drop-shadow-glow-accent {
+    filter: drop-shadow(0 0 8px hsl(var(--accent) / 0.6));
+  }
+}

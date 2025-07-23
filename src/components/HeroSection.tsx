@@ -26,31 +26,31 @@ export const HeroSection = () => {
         </div>
 
         {/* Main Title */}
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in">
           Hi, I'm{" "}
-          <span className="bg-gradient-cosmic bg-clip-text text-transparent">
+          <span className="bg-gradient-cosmic bg-clip-text text-transparent drop-shadow-lg animate-pulse">
             Akshith Goud
           </span>
         </h1>
 
         {/* Subtitle */}
-        <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-xl md:text-2xl text-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-in [animation-delay:0.2s] drop-shadow-sm">
           Passionate about building end-to-end data platforms, real-time pipelines, and interactive dashboards that make a real impact. 
           Bringing structure to messy data through innovative solutions.
         </p>
 
         {/* Skills Icons */}
-        <div className="flex items-center justify-center gap-8 mb-12">
-          <div className="flex items-center gap-2 text-primary">
-            <Database className="w-6 h-6" />
+        <div className="flex items-center justify-center gap-8 mb-12 animate-fade-in [animation-delay:0.4s]">
+          <div className="flex items-center gap-2 text-primary hover-scale group">
+            <Database className="w-6 h-6 group-hover:drop-shadow-glow-primary transition-all duration-300" />
             <span className="text-sm font-medium">Data Engineering</span>
           </div>
-          <div className="flex items-center gap-2 text-accent">
-            <Code className="w-6 h-6" />
+          <div className="flex items-center gap-2 text-accent hover-scale group">
+            <Code className="w-6 h-6 group-hover:drop-shadow-glow-accent transition-all duration-300" />
             <span className="text-sm font-medium">Full Stack</span>
           </div>
-          <div className="flex items-center gap-2 text-primary">
-            <BarChart3 className="w-6 h-6" />
+          <div className="flex items-center gap-2 text-primary hover-scale group">
+            <BarChart3 className="w-6 h-6 group-hover:drop-shadow-glow-primary transition-all duration-300" />
             <span className="text-sm font-medium">Analytics</span>
           </div>
         </div>
@@ -66,11 +66,11 @@ export const HeroSection = () => {
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex items-center justify-center gap-4">
-          <Button variant="cosmic" size="lg" onClick={scrollToWork}>
+        <div className="flex items-center justify-center gap-4 animate-fade-in [animation-delay:0.6s]">
+          <Button variant="cosmic" size="lg" onClick={scrollToWork} className="hover-scale">
             View My Work
           </Button>
-          <Button variant="hero" size="lg">
+          <Button variant="hero" size="lg" className="hover-scale">
             Get In Touch
           </Button>
         </div>
