@@ -12,8 +12,13 @@ export const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="text-2xl font-bold bg-gradient-cosmic bg-clip-text text-transparent drop-shadow-lg hover-scale">
-            MyPortfolio
+          <div className="flex items-center space-x-2 hover-scale group">
+            <div className="w-8 h-8 bg-gradient-cosmic rounded-lg flex items-center justify-center animate-sparkle group-hover:animate-spin transition-all duration-300">
+              <span className="text-white font-bold text-sm">AK</span>
+            </div>
+            <span className="text-2xl font-bold bg-gradient-cosmic bg-clip-text text-transparent drop-shadow-lg">
+              Portfolio
+            </span>
           </div>
 
           {/* Navigation Links */}

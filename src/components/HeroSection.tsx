@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Database, Code, BarChart3 } from "lucide-react";
-import heroImage from "@/assets/hero-cosmic.jpg";
+import earthImage from "@/assets/earth-space.jpg";
 
 export const HeroSection = () => {
   const scrollToWork = () => {
@@ -10,12 +10,28 @@ export const HeroSection = () => {
 
   return (
     <section className="min-h-screen relative flex items-center justify-center overflow-hidden">
-      {/* Background */}
+      {/* Animated Background */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-slow-spin"
+        style={{ backgroundImage: `url(${earthImage})` }}
       />
       <div className="absolute inset-0 bg-gradient-hero" />
+      
+      {/* Twinkling Stars */}
+      <div className="absolute inset-0 overflow-hidden">
+        {[...Array(50)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-white rounded-full animate-twinkle"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 3}s`,
+              animationDuration: `${2 + Math.random() * 2}s`
+            }}
+          />
+        ))}
+      </div>
       
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
@@ -28,15 +44,14 @@ export const HeroSection = () => {
         {/* Main Title */}
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in">
           Hi, I'm{" "}
-          <span className="bg-gradient-cosmic bg-clip-text text-transparent drop-shadow-lg animate-pulse">
-            Akshith Goud
+          <span className="bg-gradient-cosmic bg-clip-text text-transparent drop-shadow-lg animate-glow-pulse">
+            Akshith
           </span>
         </h1>
 
         {/* Subtitle */}
-        <p className="text-xl md:text-2xl text-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-in [animation-delay:0.2s] drop-shadow-sm">
-          Passionate about building end-to-end data platforms, real-time pipelines, and interactive dashboards that make a real impact. 
-          Bringing structure to messy data through innovative solutions.
+        <p className="text-xl md:text-2xl text-foreground mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in [animation-delay:0.2s] drop-shadow-sm font-light">
+          I build seamless data experiences—from pipelines to dashboards—turning complexity into clarity and insights into action.
         </p>
 
         {/* Skills Icons */}
@@ -55,13 +70,20 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        {/* Previous Employers */}
+        {/* Previous Employers - Scrolling */}
         <div className="mb-12">
           <p className="text-sm text-muted-foreground mb-6">— Previous Employers —</p>
-          <div className="flex items-center justify-center gap-8 opacity-60 hover:opacity-100 transition-opacity">
-            <div className="text-sm font-medium">University of Wisconsin</div>
-            <div className="text-sm font-medium">Skill Vertex</div>
-            <div className="text-sm font-medium">DataNest Innovations</div>
+          <div className="overflow-hidden relative">
+            <div className="flex items-center animate-scroll-x gap-12 whitespace-nowrap">
+              <div className="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity">University of Wisconsin</div>
+              <div className="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity">Skill Vertex</div>
+              <div className="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity">DataNest Innovations</div>
+              <div className="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity">Cerence Inc</div>
+              <div className="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity">University of Wisconsin</div>
+              <div className="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity">Skill Vertex</div>
+              <div className="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity">DataNest Innovations</div>
+              <div className="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity">Cerence Inc</div>
+            </div>
           </div>
         </div>
 
@@ -70,7 +92,7 @@ export const HeroSection = () => {
           <Button variant="cosmic" size="lg" onClick={scrollToWork} className="hover-scale">
             View My Work
           </Button>
-          <Button variant="hero" size="lg" className="hover-scale">
+          <Button variant="hero" size="lg" className="hover-scale animate-gentle-glow">
             Get In Touch
           </Button>
         </div>
