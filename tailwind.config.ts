@@ -61,7 +61,8 @@ export default {
 			boxShadow: {
 				'glow-primary': 'var(--glow-primary)',
 				'glow-accent': 'var(--glow-accent)',
-				'cosmic': 'var(--shadow-cosmic)'
+				'cosmic': 'var(--shadow-cosmic)',
+				'glass': 'var(--shadow-glass)'
 			},
 			transitionTimingFunction: {
 				'bounce-smooth': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)'
