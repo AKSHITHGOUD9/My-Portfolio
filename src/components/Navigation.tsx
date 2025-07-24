@@ -13,7 +13,7 @@ export const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glassmorphism border-b border-primary/10">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-lg border-b border-white/10">
       <div className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -21,42 +21,52 @@ export const Navigation = () => {
             <img 
               src={akshithName} 
               alt="Akshith" 
-              className="h-8 object-contain opacity-90 group-hover:opacity-100 transition-opacity"
+              className="h-10 object-contain opacity-90 group-hover:opacity-100 transition-opacity"
             />
           </div>
 
           {/* Navigation Links - Desktop */}
-          <div className="hidden lg:flex items-center space-x-10">
-            <button 
-              onClick={() => scrollToSection('work')}
-              className="text-foreground/70 hover:text-primary transition-all duration-300 font-medium text-sm"
-            >
-              Work
-            </button>
-            <button 
-              onClick={() => scrollToSection('projects')}
-              className="text-foreground/70 hover:text-primary transition-all duration-300 font-medium text-sm"
-            >
-              Projects
-            </button>
-            <button 
-              onClick={() => scrollToSection('experience')}
-              className="text-foreground/70 hover:text-primary transition-all duration-300 font-medium text-sm"
-            >
-              Experience
-            </button>
-            <button 
-              onClick={() => scrollToSection('education')}
-              className="text-foreground/70 hover:text-primary transition-all duration-300 font-medium text-sm"
-            >
-              Education
-            </button>
-            <button 
-              onClick={() => scrollToSection('about')}
-              className="text-foreground/70 hover:text-primary transition-all duration-300 font-medium text-sm"
-            >
-              About
-            </button>
+          <div className="hidden lg:flex items-center space-x-8">
+            <div className="glassmorphism rounded-full px-6 py-2 hover:shadow-glass transition-all duration-300">
+              <button 
+                onClick={() => scrollToSection('work')}
+                className="text-foreground/70 hover:text-primary transition-all duration-300 font-medium text-sm"
+              >
+                Work
+              </button>
+            </div>
+            <div className="glassmorphism rounded-full px-6 py-2 hover:shadow-glass transition-all duration-300">
+              <button 
+                onClick={() => scrollToSection('projects')}
+                className="text-foreground/70 hover:text-primary transition-all duration-300 font-medium text-sm"
+              >
+                Projects
+              </button>
+            </div>
+            <div className="glassmorphism rounded-full px-6 py-2 hover:shadow-glass transition-all duration-300">
+              <button 
+                onClick={() => scrollToSection('experience')}
+                className="text-foreground/70 hover:text-primary transition-all duration-300 font-medium text-sm"
+              >
+                Experience
+              </button>
+            </div>
+            <div className="glassmorphism rounded-full px-6 py-2 hover:shadow-glass transition-all duration-300">
+              <button 
+                onClick={() => scrollToSection('education')}
+                className="text-foreground/70 hover:text-primary transition-all duration-300 font-medium text-sm"
+              >
+                Education
+              </button>
+            </div>
+            <div className="glassmorphism rounded-full px-6 py-2 hover:shadow-glass transition-all duration-300">
+              <button 
+                onClick={() => scrollToSection('about')}
+                className="text-foreground/70 hover:text-primary transition-all duration-300 font-medium text-sm"
+              >
+                About
+              </button>
+            </div>
           </div>
 
           {/* Action Buttons - Desktop */}

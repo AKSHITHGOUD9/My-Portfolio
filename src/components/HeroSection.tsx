@@ -55,18 +55,11 @@ export const HeroSection = () => {
           <span className="text-sm font-medium text-foreground/90">Data Engineer | Full Stack Developer | Cloud Platform Engineer</span>
         </div>
 
-        {/* Main Title with Name Image */}
+        {/* Main Title with Name */}
         <div className="mb-8 animate-fade-in [animation-delay:0.2s]">
-          <h1 className="text-4xl md:text-6xl font-light mb-4 leading-tight text-foreground/90">
-            Hi, I'm
+          <h1 className="text-5xl md:text-7xl font-light leading-tight text-foreground/90">
+            Hi, I'm <span className="font-serif italic text-primary">Akshith</span>
           </h1>
-          <div className="flex justify-center mb-4">
-            <img 
-              src={akshithName} 
-              alt="Akshith" 
-              className="h-16 md:h-24 object-contain animate-gentle-glow drop-shadow-glow-primary"
-            />
-          </div>
         </div>
 
         {/* Subtitle */}
@@ -93,16 +86,16 @@ export const HeroSection = () => {
         {/* Previous Employers - Scrolling */}
         <div className="mb-12">
           <p className="text-sm text-muted-foreground mb-6">— Previous Employers —</p>
-          <div className="overflow-hidden relative">
-            <div className="flex items-center animate-scroll-x gap-12 whitespace-nowrap">
-              <div className="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity">University of Wisconsin</div>
-              <div className="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity">Skill Vertex</div>
-              <div className="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity">DataNest Innovations</div>
-              <div className="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity">Cerence Inc</div>
-              <div className="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity">University of Wisconsin</div>
-              <div className="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity">Skill Vertex</div>
-              <div className="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity">DataNest Innovations</div>
-              <div className="text-sm font-medium opacity-60 hover:opacity-100 transition-opacity">Cerence Inc</div>
+          <div className="overflow-hidden relative h-16">
+            <div className="flex items-center animate-scroll-x gap-16 whitespace-nowrap">
+              <img src="/lovable-uploads/35fd90c1-f0d6-4a3a-bfcc-3ce95b9c8393.png" alt="University of Wisconsin" className="h-12 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+              <img src="/lovable-uploads/9ec9f7b8-80e5-4db1-b879-0a147f2083e9.png" alt="Skill Vertex" className="h-12 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+              <img src="/lovable-uploads/2f5bc289-46e9-4271-aaf1-aeedc14aa242.png" alt="DataNest Innovations" className="h-12 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+              <img src="/lovable-uploads/e18def8b-6b68-47ae-9c4e-63c9ba35a7cb.png" alt="University of Wisconsin" className="h-12 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+              <img src="/lovable-uploads/35fd90c1-f0d6-4a3a-bfcc-3ce95b9c8393.png" alt="University of Wisconsin" className="h-12 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+              <img src="/lovable-uploads/9ec9f7b8-80e5-4db1-b879-0a147f2083e9.png" alt="Skill Vertex" className="h-12 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+              <img src="/lovable-uploads/2f5bc289-46e9-4271-aaf1-aeedc14aa242.png" alt="DataNest Innovations" className="h-12 object-contain opacity-60 hover:opacity-100 transition-opacity" />
+              <img src="/lovable-uploads/e18def8b-6b68-47ae-9c4e-63c9ba35a7cb.png" alt="University of Wisconsin" className="h-12 object-contain opacity-60 hover:opacity-100 transition-opacity" />
             </div>
           </div>
         </div>
@@ -112,7 +105,7 @@ export const HeroSection = () => {
           <Button variant="cosmic" size="lg" onClick={scrollToWork} className="hover-scale font-semibold">
             View My Work
           </Button>
-          <Button variant="shimmer" size="lg" className="animate-gentle-glow">
+          <Button variant="shimmer" size="lg" className="hover-scale">
             Get In Touch
           </Button>
         </div>

@@ -53,30 +53,6 @@ export const AboutSection = () => {
           </p>
         </div>
 
-        {/* Education */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold mb-8 text-center animate-fade-up">
-            <GraduationCap className="inline w-6 h-6 mr-2" />
-            Education
-          </h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            {education.map((edu, index) => (
-              <Card key={index} className="bg-card/30 backdrop-blur-sm border-border/50 hover-scale bg-glow animate-fade-in" style={{animationDelay: `${index * 0.2}s`}}>
-                <CardHeader>
-                  <CardTitle className="text-lg leading-tight">{edu.degree}</CardTitle>
-                  <CardDescription className="text-primary font-medium">{edu.school}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm text-muted-foreground">{edu.period}</span>
-                    <Badge variant="secondary">{edu.gpa}</Badge>
-                  </div>
-                  <p className="text-sm text-muted-foreground">{edu.focus}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
 
         {/* Skills */}
         <div className="mb-16">
@@ -124,7 +100,7 @@ export const AboutSection = () => {
             and ways to leverage data for meaningful impact.
           </p>
           <div className="flex items-center justify-center gap-4">
-            <Button variant="cosmic" size="lg" className="hover-scale animate-glow-pulse">
+            <Button variant="cosmic" size="lg" className="hover-scale">
               <Mail className="w-4 h-4 mr-2" />
               Get In Touch
             </Button>

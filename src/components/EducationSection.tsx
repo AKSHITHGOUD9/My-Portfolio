@@ -15,8 +15,8 @@ export const EducationSection = () => {
       <div className="container mx-auto max-w-6xl relative z-10">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-cosmic bg-clip-text text-transparent">
-            Education & Learning
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="bg-gradient-cosmic bg-clip-text text-transparent">Education</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Continuous learning and academic excellence in the field of Information Science and Data Analytics
@@ -49,12 +49,15 @@ export const EducationSection = () => {
                         className="w-full h-full object-contain"
                       />
                     </div>
-                    <div>
+                    <div className="flex-1">
                       <h3 className="text-xl font-bold text-foreground">Master's in Information Science</h3>
                       <p className="text-muted-foreground flex items-center gap-2">
                         <MapPin className="w-4 h-4" />
                         University of Wisconsin-Madison
                       </p>
+                    </div>
+                    <div className="hidden md:flex items-center justify-center w-20 h-20 bg-gradient-cosmic rounded-full opacity-20">
+                      <span className="text-xs text-center">Academic Journey</span>
                     </div>
                   </div>
 
@@ -106,31 +109,34 @@ export const EducationSection = () => {
                         className="w-full h-full object-contain"
                       />
                     </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-foreground">Software Engineering Experience</h3>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-foreground">Bachelor of Technology in Computer Science Engineering</h3>
                       <p className="text-muted-foreground flex items-center gap-2">
                         <MapPin className="w-4 h-4" />
-                        Cerence Inc.
+                        Hindustan Institute of Technology and Science
                       </p>
+                    </div>
+                    <div className="hidden md:flex items-center justify-center w-20 h-20 bg-gradient-cosmic rounded-full opacity-20">
+                      <span className="text-xs text-center">Academic Journey</span>
                     </div>
                   </div>
 
                   {/* Skills */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     <Badge variant="outline">Software Development</Badge>
-                    <Badge variant="outline">AI/ML</Badge>
-                    <Badge variant="outline">Voice Technology</Badge>
-                    <Badge variant="outline">Data Processing</Badge>
+                    <Badge variant="outline">Data Structures</Badge>
+                    <Badge variant="outline">Algorithms</Badge>
+                    <Badge variant="outline">Database Systems</Badge>
+                    <Badge variant="outline">Programming</Badge>
                   </div>
 
                   <p className="text-muted-foreground leading-relaxed mb-4">
-                    Gained valuable industry experience in software engineering and AI technologies, working on 
-                    voice recognition systems and data processing pipelines that enhanced my technical foundation.
+                    Built strong foundation in computer science fundamentals, programming languages, and software engineering principles that laid the groundwork for my data engineering career.
                   </p>
 
                   <div className="flex items-center gap-2 text-sm text-accent">
                     <GraduationCap className="w-4 h-4" />
-                    <span>Foundation in Software Engineering & AI</span>
+                    <span>Foundation in Computer Science & Engineering</span>
                   </div>
                 </CardContent>
               </Card>
@@ -138,26 +144,6 @@ export const EducationSection = () => {
           </div>
         </div>
 
-        {/* Photo Section */}
-        <div className="mt-20 text-center animate-fade-in">
-          <div className="max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-6 bg-gradient-cosmic bg-clip-text text-transparent">
-              Academic Journey
-            </h3>
-            <div className="relative inline-block">
-              <div className="w-64 h-64 mx-auto rounded-full bg-gradient-cosmic p-1 animate-glow-pulse">
-                <div className="w-full h-full rounded-full bg-muted/50 backdrop-blur-sm flex items-center justify-center">
-                  <span className="text-4xl">📸</span>
-                  <p className="absolute bottom-4 text-sm text-muted-foreground">
-                    Photo placeholder - Add your academic photo here
-                  </p>
-                </div>
-              </div>
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary/20 rounded-full animate-ping" />
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-accent/20 rounded-full animate-pulse" />
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
