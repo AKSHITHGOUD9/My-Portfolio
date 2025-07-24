@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Database, Code, BarChart3 } from "lucide-react";
-import akshithName from "@/assets/akshith-name.png";
 import cosmicBg from "@/assets/cosmic-bg.jpg";
 
 export const HeroSection = () => {

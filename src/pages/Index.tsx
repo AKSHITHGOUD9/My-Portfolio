@@ -1,10 +1,10 @@
-import { Navigation } from "@/components/Navigation";
-import { HeroSection } from "@/components/HeroSection";
-import { ExperienceSection } from "@/components/ExperienceSection";
-import { ProjectsSection } from "@/components/ProjectsSection";
-import { EducationSection } from "@/components/EducationSection";
-import { AboutSection } from "@/components/AboutSection";
-import cosmicBg from "@/assets/cosmic-bg.jpg";
+import React from "react";
+import { Navigation } from "@/components/sections/Navigation";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { ExperienceSection } from "@/components/sections/ExperienceSection";
+import { ProjectsSection } from "@/components/sections/ProjectsSection";
+import { EducationSection } from "@/components/sections/EducationSection";
+import { AboutSection } from "@/components/sections/AboutSection";
 
 const Index = () => {
   return (
