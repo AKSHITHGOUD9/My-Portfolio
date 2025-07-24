@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { GraduationCap, Award, Download, Mail } from "lucide-react";
+import { GraduationCap, Award, Download, Mail, Linkedin, Github, Instagram, MessageCircle } from "lucide-react";
 
 export const AboutSection = () => {
   const education = [
@@ -40,7 +40,7 @@ export const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 px-6">
+    <section id="about" className="py-20 px-6 cosmic-bg">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -93,24 +93,67 @@ export const AboutSection = () => {
         </div>
 
         {/* Contact CTA */}
-        <div className="text-center bg-card/30 backdrop-blur-sm rounded-lg p-8 border border-border/50 bg-glow animate-fade-up">
+        <div className="text-center bg-card/30 backdrop-blur-sm rounded-lg p-8 border border-border/50 animate-fade-up">
           <h3 className="text-2xl font-bold mb-4">Let's Work Together</h3>
           <p className="text-foreground/80 mb-6 max-w-2xl mx-auto">
             I'm always interested in discussing new opportunities, innovative projects, 
             and ways to leverage data for meaningful impact.
           </p>
           <div className="flex items-center justify-center gap-4">
-            <Button variant="cosmic" size="lg" className="hover-scale">
-              <Mail className="w-4 h-4 mr-2" />
-              Get In Touch
-            </Button>
-            <Button variant="hero" size="lg" className="hover-scale">
+            <a 
+              href="https://drive.google.com/file/d/1ROnv6Chs7wFZfkokalR6U2Tf6R5Fvy3Y/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{display: 'inline-flex', alignItems: 'center', padding: '12px 24px', backgroundColor: '#3b82f6', color: 'white', borderRadius: '8px', textDecoration: 'none', fontWeight: 'bold', position: 'relative', zIndex: 10}}
+            >
               <Download className="w-4 h-4 mr-2" />
               Download Resume
-            </Button>
+            </a>
           </div>
           <div className="mt-6 text-sm text-foreground/70">
             <p>📧 akshithmothkuri@gmail.com | 📱 +1 (608) 217-6632 | 📍 United States</p>
+          </div>
+        </div>
+
+        {/* Social Media Section */}
+        <div className="text-center mt-16 animate-fade-up">
+          <p className="text-lg text-foreground/80 mb-8">Nice to meet you here</p>
+          <div className="flex items-center justify-center gap-8 mb-8">
+            <a 
+              href="mailto:akshithmothkuri@gmail.com" 
+              className="w-12 h-12 rounded-full border-2 border-white/30 flex items-center justify-center hover:border-primary/60 hover:bg-primary/10 transition-all duration-300 hover-scale group"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Mail className="w-5 h-5 text-white/80 group-hover:text-primary transition-colors duration-300" />
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/akshithgoudmothkuri/" 
+              className="w-12 h-12 rounded-full border-2 border-white/30 flex items-center justify-center hover:border-primary/60 hover:bg-primary/10 transition-all duration-300 hover-scale group"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Linkedin className="w-5 h-5 text-white/80 group-hover:text-primary transition-colors duration-300" />
+            </a>
+            <a 
+              href="https://github.com/AKSHITHGOUD9" 
+              className="w-12 h-12 rounded-full border-2 border-white/30 flex items-center justify-center hover:border-accent/60 hover:bg-accent/10 transition-all duration-300 hover-scale group"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Github className="w-5 h-5 text-white/80 group-hover:text-accent transition-colors duration-300" />
+            </a>
+            <a 
+              href="https://www.instagram.com/akshith__49/" 
+              className="w-12 h-12 rounded-full border-2 border-white/30 flex items-center justify-center hover:border-accent/60 hover:bg-accent/10 transition-all duration-300 hover-scale group"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Instagram className="w-5 h-5 text-white/80 group-hover:text-accent transition-colors duration-300" />
+            </a>
+          </div>
+          <div className="text-sm text-foreground/60">
+            <p>© Akshith Mothkuri All Rights Reserved</p>
           </div>
         </div>
       </div>

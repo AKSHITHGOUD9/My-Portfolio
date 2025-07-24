@@ -4,7 +4,7 @@ import { GraduationCap, Calendar, MapPin, Award } from "lucide-react";
 
 export const EducationSection = () => {
   return (
-    <section id="education" className="py-20 px-6 relative overflow-hidden">
+    <section id="education" className="py-20 px-6 relative overflow-hidden cosmic-bg">
       {/* Artistic Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl animate-float" />
@@ -31,20 +31,20 @@ export const EducationSection = () => {
           {/* Current Education */}
           <div className="relative mb-16 animate-slide-in-left">
             <div className="flex items-center mb-4">
-              <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-primary rounded-full transform md:-translate-x-2 shadow-glow-primary animate-glow-pulse" />
-              <span className="ml-12 md:ml-0 md:absolute md:right-1/2 md:mr-8 text-sm text-primary font-medium bg-primary/10 px-3 py-1 rounded-full">
-                September 2023 - Present
+              <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-primary rounded-full transform md:-translate-x-2 shadow-glow-primary" />
+              <span className="ml-12 md:ml-0 md:absolute md:left-1/2 md:ml-8 text-sm text-primary font-medium bg-primary/10 px-3 py-1 rounded-full">
+                September 2023 - May 2025
               </span>
             </div>
             
             <div className="ml-12 md:ml-0 md:w-1/2 md:ml-auto md:pl-8">
               <Card className="bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-cosmic">
                 <CardContent className="p-6">
-                  {/* University Logo Placeholder */}
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-16 h-16 bg-gradient-cosmic rounded-lg p-2 flex items-center justify-center">
+                  {/* Company Logo */}
+                  <div className="flex items-center justify-center gap-4 mb-4">
+                    <div className="w-16 h-16 rounded-lg p-2 flex items-center justify-center">
                       <img 
-                        src="/lovable-uploads/242d185f-f6e5-4e2a-87cf-39963be1afbd.png"
+                        src="/lovable-uploads/UWM.png"
                         alt="University of Wisconsin"
                         className="w-full h-full object-contain"
                       />
@@ -55,9 +55,6 @@ export const EducationSection = () => {
                         <MapPin className="w-4 h-4" />
                         University of Wisconsin-Madison
                       </p>
-                    </div>
-                    <div className="hidden md:flex items-center justify-center w-20 h-20 bg-gradient-cosmic rounded-full opacity-20">
-                      <span className="text-xs text-center">Academic Journey</span>
                     </div>
                   </div>
 
@@ -73,7 +70,7 @@ export const EducationSection = () => {
 
                   {/* Description */}
                   <p className="text-muted-foreground leading-relaxed mb-4">
-                    I am currently pursuing a Master's degree in Information Science, where I am exploring the dynamic and ever-evolving 
+                    I've completed my Master's degree in Information Science, where I came across the dynamic and ever-evolving 
                     field of information management, technology, and data analysis to gain a deep understanding of how information 
                     shapes our world and influences decision-making processes.
                   </p>
@@ -86,6 +83,18 @@ export const EducationSection = () => {
                 </CardContent>
               </Card>
             </div>
+
+            {/* UWM Image positioned beside the Master's card */}
+            <div className="absolute left-0 top-0 flex items-center h-full">
+              <div className="relative group">
+                <div className="absolute -inset-3 bg-gradient-to-r from-primary to-accent rounded-full opacity-20 blur-md"></div>
+                <img 
+                  src="/lovable-uploads/UMWR.png"
+                  alt="University of Wisconsin"
+                  className="relative w-60 h-60 object-cover rounded-full border-2 border-primary/40 transition-all duration-300 group-hover:scale-110 animate-float-gentle p-2"
+                />
+              </div>
+            </div>
           </div>
 
           {/* Previous Education */}
@@ -93,7 +102,7 @@ export const EducationSection = () => {
             <div className="flex items-center mb-4">
               <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-accent rounded-full transform md:-translate-x-2 shadow-glow-accent" />
               <span className="ml-12 md:ml-0 md:absolute md:left-1/2 md:ml-8 text-sm text-accent font-medium bg-accent/10 px-3 py-1 rounded-full">
-                Feb 2021 - Jun 2023
+                July 2019 - May 2023
               </span>
             </div>
             
@@ -101,11 +110,11 @@ export const EducationSection = () => {
               <Card className="bg-card/50 backdrop-blur-sm border-accent/20 hover:border-accent/40 transition-all duration-300 hover:shadow-cosmic">
                 <CardContent className="p-6">
                   {/* Company Logo */}
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-accent to-accent/70 rounded-lg p-2 flex items-center justify-center">
+                  <div className="flex items-center justify-center gap-4 mb-4">
+                    <div className="w-16 h-16 rounded-lg p-2 flex items-center justify-center">
                       <img 
-                        src="/lovable-uploads/242d185f-f6e5-4e2a-87cf-39963be1afbd.png"
-                        alt="Cerence"
+                        src="/lovable-uploads/HIT.png"
+                        alt="Hindustan Institute of Technology"
                         className="w-full h-full object-contain"
                       />
                     </div>
@@ -115,9 +124,6 @@ export const EducationSection = () => {
                         <MapPin className="w-4 h-4" />
                         Hindustan Institute of Technology and Science
                       </p>
-                    </div>
-                    <div className="hidden md:flex items-center justify-center w-20 h-20 bg-gradient-cosmic rounded-full opacity-20">
-                      <span className="text-xs text-center">Academic Journey</span>
                     </div>
                   </div>
 
@@ -140,6 +146,18 @@ export const EducationSection = () => {
                   </div>
                 </CardContent>
               </Card>
+            </div>
+
+            {/* HIT Image positioned beside the Bachelor's card */}
+            <div className="absolute right-0 top-0 flex items-center h-full">
+              <div className="relative group">
+                <div className="absolute -inset-3 bg-gradient-to-r from-accent to-primary rounded-full opacity-20 blur-md"></div>
+                <img 
+                  src="/lovable-uploads/HITS.png"
+                  alt="Hindustan Institute of Technology"
+                  className="relative w-60 h-60 object-cover rounded-full border-2 border-accent/40 transition-all duration-300 group-hover:scale-110 animate-float-gentle p-2"
+                />
+              </div>
             </div>
           </div>
         </div>

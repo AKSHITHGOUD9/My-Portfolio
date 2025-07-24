@@ -10,7 +10,7 @@ export const ExperienceSection = () => {
       location: "Madison, WI",
       period: "March 2025 - July 2025",
       type: "Full-time",
-      logo: "/lovable-uploads/35fd90c1-f0d6-4a3a-bfcc-3ce95b9c8393.png",
+      logo: "/lovable-uploads/UWM.png",
       achievements: [
         "Developed full-stack archival catalog system using Django/PostgreSQL and React",
         "Improved data discoverability and reduced search latency by 50%",
@@ -26,7 +26,7 @@ export const ExperienceSection = () => {
       location: "Madison, WI", 
       period: "May 2024 - July 2024",
       type: "Internship",
-      logo: "/lovable-uploads/e18def8b-6b68-47ae-9c4e-63c9ba35a7cb.png",
+      logo: "/lovable-uploads/RecWell.png",
       achievements: [
         "Designed Spark workflows to integrate sensor + ticketing data",
         "Reduced Snowflake loads by 15% through optimized data processing",
@@ -42,7 +42,7 @@ export const ExperienceSection = () => {
       location: "Bangalore, India",
       period: "June 2022 - August 2022",
       type: "Internship",
-      logo: "/lovable-uploads/9ec9f7b8-80e5-4db1-b879-0a147f2083e9.png",
+      logo: "/lovable-uploads/SkillVertex.png",
       achievements: [
         "Built time-series models in Python/R for course demand forecasting",
         "Improved accuracy by 8% across 10+ categories",
@@ -58,7 +58,7 @@ export const ExperienceSection = () => {
       location: "Chennai, India",
       period: "July 2021 - May 2023",
       type: "Training Program",
-      logo: "/lovable-uploads/2f5bc289-46e9-4271-aaf1-aeedc14aa242.png",
+      logo: "/lovable-uploads/DataNest.png",
       achievements: [
         "Worked on building Python-based ETL pipelines and Django APIs for PostgreSQL and Snowflake data integration",
         "Assisted in deploying Docker/Kubernetes microservices on AWS",
@@ -70,7 +70,7 @@ export const ExperienceSection = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 px-6 bg-gradient-space">
+    <section id="experience" className="py-20 px-6 cosmic-bg">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">

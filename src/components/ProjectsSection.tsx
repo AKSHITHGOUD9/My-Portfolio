@@ -95,10 +95,10 @@ export const ProjectsSection = () => {
   ];
 
   return (
-    <section id="projects" className="py-24 px-6 cosmic-bg">
+    <section id="projects" className="py-20 px-6 cosmic-bg">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
-        <div className="text-center mb-20 animate-fade-in">
+        <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-6xl font-light mb-6 text-foreground">
             Featured <span className="bg-gradient-cosmic bg-clip-text text-transparent">Projects</span>
           </h2>
@@ -108,7 +108,7 @@ export const ProjectsSection = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {projects.map((project, index) => (
             <Card 
               key={project.id}
@@ -117,7 +117,7 @@ export const ProjectsSection = () => {
               onMouseEnter={() => setHoveredProject(project.id)}
               onMouseLeave={() => setHoveredProject(null)}
             >
-              <CardContent className="p-0 relative h-80">
+              <CardContent className="p-0 relative h-[28rem]">
                 {/* Project Image */}
                 <div className="absolute inset-0 overflow-hidden rounded-lg">
                   <img 
