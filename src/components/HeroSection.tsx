@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Database, Code, BarChart3 } from "lucide-react";
-import earthImage from "@/assets/earth-space.jpg";
+import akshithName from "@/assets/akshith-name.png";
+import cosmicBg from "@/assets/cosmic-bg.jpg";
 
 export const HeroSection = () => {
   const scrollToWork = () => {
@@ -9,48 +10,67 @@ export const HeroSection = () => {
   };
 
   return (
-    <section className="min-h-screen relative flex items-center justify-center overflow-hidden">
-      {/* Animated Background */}
+    <section className="min-h-screen relative flex items-center justify-center overflow-hidden cosmic-bg">
+      {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-slow-spin"
-        style={{ backgroundImage: `url(${earthImage})` }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${cosmicBg})` }}
       />
-      <div className="absolute inset-0 bg-gradient-hero" />
+      
+      {/* Spline Animation Overlay */}
+      <div className="absolute inset-0 opacity-60">
+        <iframe 
+          src='https://my.spline.design/particlenebula-mRTizpxxsAEVal12RjOQfu3y/' 
+          frameBorder='0' 
+          width='100%' 
+          height='100%'
+          className="pointer-events-none"
+        />
+      </div>
+      
+      {/* Subtle overlay for text readability */}
+      <div className="absolute inset-0 bg-background/20" />
       
       {/* Twinkling Stars */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(50)].map((_, i) => (
+        {[...Array(80)].map((_, i) => (
           <div
             key={i}
             className="absolute w-1 h-1 bg-white rounded-full animate-twinkle"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${2 + Math.random() * 2}s`
+              animationDelay: `${Math.random() * 4}s`,
+              animationDuration: `${3 + Math.random() * 3}s`
             }}
           />
         ))}
       </div>
       
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
         {/* Title Badge */}
-        <div className="inline-flex items-center gap-2 bg-card/20 backdrop-blur-sm rounded-full px-6 py-3 mb-8 border border-primary/30">
-          <Database className="w-4 h-4 text-primary" />
-          <span className="text-sm font-medium">Data Engineer | Full Stack Developer | Cloud Platform Engineer</span>
+        <div className="inline-flex items-center gap-2 glassmorphism rounded-full px-8 py-4 mb-12 animate-fade-in">
+          <Database className="w-5 h-5 text-primary" />
+          <span className="text-sm font-medium text-foreground/90">Data Engineer | Full Stack Developer | Cloud Platform Engineer</span>
         </div>
 
-        {/* Main Title */}
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in">
-          Hi, I'm{" "}
-          <span className="bg-gradient-cosmic bg-clip-text text-transparent drop-shadow-lg animate-glow-pulse">
-            Akshith
-          </span>
-        </h1>
+        {/* Main Title with Name Image */}
+        <div className="mb-8 animate-fade-in [animation-delay:0.2s]">
+          <h1 className="text-4xl md:text-6xl font-light mb-4 leading-tight text-foreground/90">
+            Hi, I'm
+          </h1>
+          <div className="flex justify-center mb-4">
+            <img 
+              src={akshithName} 
+              alt="Akshith" 
+              className="h-16 md:h-24 object-contain animate-gentle-glow drop-shadow-glow-primary"
+            />
+          </div>
+        </div>
 
         {/* Subtitle */}
-        <p className="text-xl md:text-2xl text-foreground mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in [animation-delay:0.2s] drop-shadow-sm font-light">
+        <p className="text-xl md:text-2xl text-foreground/80 mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in [animation-delay:0.4s] font-light">
           I build seamless data experiences—from pipelines to dashboards—turning complexity into clarity and insights into action.
         </p>
 
@@ -88,11 +108,11 @@ export const HeroSection = () => {
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex items-center justify-center gap-4 animate-fade-in [animation-delay:0.6s]">
-          <Button variant="cosmic" size="lg" onClick={scrollToWork} className="hover-scale">
+        <div className="flex items-center justify-center gap-6 animate-fade-in [animation-delay:0.8s]">
+          <Button variant="cosmic" size="lg" onClick={scrollToWork} className="hover-scale font-semibold">
             View My Work
           </Button>
-          <Button variant="hero" size="lg" className="hover-scale animate-gentle-glow">
+          <Button variant="shimmer" size="lg" className="animate-gentle-glow">
             Get In Touch
           </Button>
         </div>
