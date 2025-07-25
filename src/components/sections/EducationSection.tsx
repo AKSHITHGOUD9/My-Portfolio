@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { GraduationCap, Calendar, MapPin, Award } from "lucide-react";
+import { GraduationCap, MapPin, Award } from "lucide-react";
 
 export const EducationSection = () => {
   return (

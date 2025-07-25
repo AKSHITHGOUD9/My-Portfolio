@@ -1,15 +1,15 @@
 import { Button } from "@/components/ui/button";
-import { FileText, Github, Linkedin, Mail, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { FileText } from "lucide-react";
 import akshithName from "@/assets/akshith-name.png";
+import { useAnalytics } from "@/hooks/use-analytics";
 
 export const Navigation = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { trackButtonClick, trackDownload } = useAnalytics();
   
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: 'smooth' });
-    setIsMenuOpen(false);
+    trackButtonClick(`nav_${id}`);
   };
 
   return (
@@ -65,7 +65,13 @@ export const Navigation = () => {
 
         {/* Resume Button - right */}
         <div className="flex items-center">
-          <a href="https://drive.google.com/file/d/1ROnv6Chs7wFZfkokalR6U2Tf6R5Fvy3Y/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="relative group">
+          <a 
+            href="https://drive.google.com/file/d/1ROnv6Chs7wFZfkokalR6U2Tf6R5Fvy3Y/view?usp=sharing" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            onClick={() => trackDownload('resume')}
+            className="relative group"
+          >
             {/* Enhanced glow effect */}
             <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-white/30 via-white/50 to-white/30 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-white/20 to-white/40 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

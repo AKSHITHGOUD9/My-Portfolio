@@ -1,11 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Database, Code, BarChart3 } from "lucide-react";
 import cosmicBg from "@/assets/cosmic-bg.jpg";
+import akshithName from "@/assets/akshith-name.png";
+import { useAnalytics } from "@/hooks/use-analytics";
 
 export const HeroSection = () => {
+  const { trackButtonClick } = useAnalytics();
+  
   const scrollToWork = () => {
-    const element = document.getElementById('work');
+    const element = document.getElementById('projects');
     element?.scrollIntoView({ behavior: 'smooth' });
+    trackButtonClick('view_work');
   };
 
   const logos = [
@@ -76,6 +81,15 @@ export const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
 
+        {/* Large Logo */}
+        <div className="mb-8 animate-fade-in [animation-delay:0.1s]">
+          <img 
+            src={akshithName} 
+            alt="Akshith" 
+            className="h-32 md:h-48 object-contain opacity-90 drop-shadow-2xl mx-auto"
+          />
+        </div>
+
         {/* Main Title with Name */}
         <div className="mb-8 animate-fade-in [animation-delay:0.2s]">
           <h1 className="text-5xl md:text-7xl font-light leading-tight text-foreground/90">
@@ -123,7 +137,26 @@ export const HeroSection = () => {
           </div>
         </div>
 
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in [animation-delay:0.6s]">
+          <Button 
+            onClick={scrollToWork}
+            className="px-8 py-3 text-lg font-semibold bg-primary hover:bg-primary/90 text-primary-foreground rounded-full shadow-lg hover:shadow-xl transition-all duration-300 animate-float-gentle"
+          >
+            View My Work
+          </Button>
+          <Button 
+            variant="outline"
+            className="px-8 py-3 text-lg font-semibold border-2 border-white/30 text-white hover:bg-white/10 rounded-full backdrop-blur-md transition-all duration-300"
+          >
+            Get In Touch
+          </Button>
+        </div>
 
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <ArrowDown className="w-6 h-6 text-white/60" />
+        </div>
       </div>
     </section>
   );

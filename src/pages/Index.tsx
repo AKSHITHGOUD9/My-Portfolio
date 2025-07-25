@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Navigation } from "@/components/sections/Navigation";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ExperienceSection } from "@/components/sections/ExperienceSection";

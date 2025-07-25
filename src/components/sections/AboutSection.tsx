@@ -1,25 +1,8 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { GraduationCap, Award, Download, Mail, Linkedin, Github, Instagram, MessageCircle } from "lucide-react";
+import { Award, Download, Mail, Linkedin, Github, Instagram } from "lucide-react";
 
 export const AboutSection = () => {
-  const education = [
-    {
-      degree: "Master of Science in Information (Data Track)",
-      school: "University of Wisconsin, Madison",
-      period: "September 2023 - May 2025",
-      gpa: "3.8 / 4.0 GPA",
-      focus: "Data Science, Machine Learning, Information Systems"
-    },
-    {
-      degree: "Bachelor of Technology in Computer Science Engineering", 
-      school: "Hindustan Institute of Technology and Science",
-      period: "July 2019 - May 2023",
-      gpa: "3.4 / 4.0 GPA",
-      focus: "Software Engineering, Data Structures, Algorithms"
-    }
-  ];
 
   const skills = {
     "Languages & Scripting": ["Python", "Java", "Shell Scripting", "SQL", "T-SQL"],
