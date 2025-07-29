@@ -10,86 +10,99 @@ export const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      title: "Real-Time Data Pipeline",
-      description: "Built scalable ETL pipeline processing 1M+ records daily with Apache Kafka, Spark, and cloud infrastructure.",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80",
-      tags: ["Apache Kafka", "Spark", "Python", "AWS"],
-      type: "Data Engineering",
+      title: "Smart City Traffic & Anomaly Detection",
+      description: "Real-time traffic monitoring system with streaming analytics, anomaly detection, and intelligent alerting for smart city infrastructure using Kafka, Spark, and ML pipelines.",
+      image: "/lovable-uploads/Traffic.mp4",
+      tags: ["Kafka", "Spark", "ML", "Docker", "Kubernetes"],
+      type: "Real-Time Analytics",
+      githubUrl: null,
+      demoUrl: null,
+      isOngoing: true,
       specs: {
-        volume: "1M+ Records Daily",
-        latency: "< 100ms Processing",
-        reliability: "99.9% Uptime",
-        scalability: "Auto-scaling"
+        volume: "Real-Time Streaming",
+        latency: "Sub-second Processing",
+        reliability: "ML Anomaly Detection",
+        scalability: "Cloud-Native Architecture"
       }
     },
     {
       id: 2,
-      title: "ML Analytics Dashboard",
-      description: "Developed interactive dashboard with predictive analytics and real-time visualizations for business intelligence.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80",
-      tags: ["React", "Python", "ML", "D3.js"],
-      type: "Full Stack + ML",
+      title: "Netflix Movie Analytics Pipeline",
+      description: "Built a scalable analytics pipeline using dbt, Snowflake, and Amazon S3 to transform raw movie data into clean, analytics-ready tables with automated data quality tests.",
+      image: "/lovable-uploads/Netflix.mp4",
+      tags: ["dbt", "Snowflake", "Amazon S3", "Python", "SQL"],
+      type: "Data Engineering",
+      githubUrl: "https://github.com/AKSHITHGOUD9/Netflix-Project",
+      demoUrl: "",
       specs: {
-        users: "10K+ Active Users",
-        metrics: "50+ KPI Tracked",
-        performance: "Real-time Updates",
-        accuracy: "94% Prediction Rate"
+        volume: "MovieLens 20M Dataset",
+        latency: "Automated Pipeline",
+        reliability: "Data Quality Tests",
+        scalability: "Cloud-based Architecture"
       }
     },
     {
       id: 3,
-      title: "Cloud Data Warehouse",
-      description: "Architected modern data warehouse with automated data governance and multi-source integration.",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&q=80",
-      tags: ["Snowflake", "DBT", "Airflow", "SQL"],
-      type: "Data Architecture",
+      title: "Paris Olympic Azure Analytics",
+      description: "Built comprehensive analytics platform for Paris Olympics data using Azure services to process and analyze athlete, medal, venue, and schedule information for sports insights.",
+      image: "/lovable-uploads/Paris-Azure.mp4",
+      tags: ["Azure", "Python", "Data Analytics", "CSV", "Sports Data"],
+      type: "Cloud Analytics",
+      githubUrl: "https://github.com/AKSHITHGOUD9/Paris-olympic-azure-project",
+      demoUrl: null,
       specs: {
-        storage: "50TB+ Data Storage",
-        sources: "20+ Data Sources",
-        queries: "Sub-second Response",
-        governance: "Automated Lineage"
+        volume: "Multiple CSV Datasets",
+        latency: "Azure Processing",
+        reliability: "Structured Data",
+        scalability: "Cloud-based Platform"
       }
     },
     {
       id: 4,
-      title: "Microservices Platform",
-      description: "Built containerized microservices architecture with API gateway and comprehensive monitoring.",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80",
-      tags: ["Docker", "Kubernetes", "Node.js", "Redis"],
-      type: "Backend Development",
+      title: "Uber Data Analytics Pipeline",
+      description: "Built modern data engineering pipeline using GCP, Mage AI, and BigQuery to process Uber trip data for analytics and visualization with Looker Studio.",
+      image: "/lovable-uploads/uber.mp4",
+      tags: ["GCP", "BigQuery", "Mage AI", "Python", "Looker Studio"],
+      type: "Data Engineering",
+      githubUrl: "https://github.com/AKSHITHGOUD9/Uber-Data-Project",
+      demoUrl: null,
       specs: {
-        services: "15+ Microservices",
-        throughput: "10K+ Requests/sec",
-        availability: "99.99% SLA",
-        monitoring: "Full Observability"
+        volume: "TLC Trip Record Data",
+        latency: "ETL Pipeline",
+        reliability: "GCP Infrastructure",
+        scalability: "Cloud-based Analytics"
       }
     },
     {
       id: 5,
-      title: "Financial Risk Analytics",
-      description: "Developed risk assessment models and automated reporting system for investment decision support.",
-      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80",
-      tags: ["Python", "Pandas", "PostgreSQL", "Tableau"],
-      type: "Data Analytics",
+      title: "Stock Market Kafka Real-Time Pipeline",
+      description: "Built end-to-end real-time data engineering pipeline using Apache Kafka, AWS services, and Python to process live stock market data for analytics.",
+      image: "/lovable-uploads/Stocks.mp4",
+      tags: ["Apache Kafka", "AWS", "Python", "S3", "Athena"],
+      type: "Real-Time Data Engineering",
+      githubUrl: "https://github.com/AKSHITHGOUD9/STOCKS-Market-Project",
+      demoUrl: null,
       specs: {
-        models: "5+ Risk Models",
-        automation: "Daily Reports",
-        accuracy: "92% Risk Prediction",
-        compliance: "SOX Compliant"
+        volume: "Real-Time Stock Data",
+        latency: "Live Streaming",
+        reliability: "Kafka Infrastructure",
+        scalability: "AWS Cloud Services"
       }
     },
     {
       id: 6,
-      title: "IoT Data Processing",
-      description: "Created real-time IoT data processing system with edge computing and predictive maintenance.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80",
-      tags: ["IoT", "Edge Computing", "Time Series", "Azure"],
-      type: "IoT Platform",
+      title: "YouTube Data Engineering Analysis",
+      description: "Developed comprehensive data pipeline using AWS services to analyze YouTube trending videos data with ETL processing and business intelligence.",
+      image: "/lovable-uploads/Youtube.mp4",
+      tags: ["AWS", "Lambda", "Glue", "QuickSight", "PySpark"],
+      type: "Cloud Data Engineering",
+      githubUrl: "https://github.com/AKSHITHGOUD9/YOUTUBE-Data-Analysis",
+      demoUrl: null,
       specs: {
-        devices: "1000+ IoT Devices",
-        frequency: "Real-time Streaming",
-        predictions: "Predictive Maintenance",
-        efficiency: "25% Cost Reduction"
+        volume: "YouTube Trending Data",
+        latency: "ETL Processing",
+        reliability: "AWS Infrastructure",
+        scalability: "Serverless Architecture"
       }
     }
   ];
@@ -99,8 +112,8 @@ export const ProjectsSection = () => {
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-6xl font-light mb-6 text-foreground">
-            Featured <span className="bg-gradient-cosmic bg-clip-text text-transparent">Projects</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <span className="bg-gradient-cosmic bg-clip-text text-transparent">Projects</span>
           </h2>
           <p className="text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed font-light">
             Transforming complex data challenges into elegant solutions through innovative engineering and design
@@ -108,7 +121,7 @@ export const ProjectsSection = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
           {projects.map((project, index) => (
             <Card 
               key={project.id}
@@ -117,40 +130,88 @@ export const ProjectsSection = () => {
               onMouseEnter={() => setHoveredProject(project.id)}
               onMouseLeave={() => setHoveredProject(null)}
             >
-              <CardContent className="p-0 relative h-[28rem]">
-                {/* Project Image */}
+              <CardContent className="p-0 relative h-[20rem] md:h-[28rem]">
+                {/* Project Image/Video */}
                 <div className="absolute inset-0 overflow-hidden rounded-lg">
-                  <img 
-                    src={project.image}
-                    alt={project.title}
-                    className={`w-full h-full object-cover transition-all duration-700 ${
-                      hoveredProject === project.id ? 'scale-110 blur-sm' : 'scale-100'
-                    }`}
-                  />
+                  {project.image.endsWith('.mp4') || project.image.endsWith('.webm') || project.image.endsWith('.mov') ? (
+                    <video 
+                      src={project.image}
+                      loop
+                      muted
+                      playsInline
+                      ref={(el) => {
+                        if (el) {
+                          if (hoveredProject === project.id) {
+                            el.play();
+                          } else {
+                            el.pause();
+                            el.currentTime = 0;
+                          }
+                        }
+                      }}
+                      className={`w-full h-full object-cover transition-all duration-700 ${
+                        hoveredProject === project.id ? 'scale-110 blur-sm' : 'scale-100'
+                      }`}
+                    />
+                  ) : (
+                    <img 
+                      src={project.image}
+                      alt={project.title}
+                      className={`w-full h-full object-cover transition-all duration-700 ${
+                        hoveredProject === project.id ? 'scale-110 blur-sm' : 'scale-100'
+                      }`}
+                    />
+                  )}
                   <div className={`absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent transition-opacity duration-500 ${
                     hoveredProject === project.id ? 'opacity-95' : 'opacity-70'
                   }`} />
                 </div>
 
                 {/* Content Overlay */}
-                <div className="absolute inset-0 p-6 flex flex-col justify-between">
+                <div className="absolute inset-0 p-4 md:p-6 flex flex-col justify-between">
                   <div className={`transition-all duration-500 ${
                     hoveredProject === project.id ? 'translate-y-0' : 'translate-y-2'
                   }`}>
-                    <Badge variant="secondary" className="mb-3 glassmorphism text-primary border-primary/30 font-medium">
+                    <Badge variant="secondary" className="mb-3 glassmorphism text-primary border-primary/30 font-medium text-xs">
                       {project.type}
                     </Badge>
-                    <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
-                      {project.title}
+                    <h3 className={`text-lg md:text-xl font-semibold mb-3 transition-colors ${
+                      project.id === 3 
+                        ? 'text-primary' 
+                        : project.id === 2
+                        ? 'text-foreground group-hover:text-primary'
+                        : project.id === 4
+                        ? 'text-foreground group-hover:text-black'
+                        : 'text-foreground group-hover:text-primary'
+                    }`}>
+                      {project.id === 3 ? (
+                        <>Paris <span className="text-blue-500">O</span><span className="text-black">l</span><span className="text-red-500">y</span><span className="text-yellow-500">m</span><span className="text-green-500">p</span><span className="text-blue-500">i</span><span className="text-black">c</span> Azure Analytics</>
+                      ) : project.id === 2 ? (
+                        <><span className="text-red-600">NETFLIX</span> Movie Analytics Pipeline</>
+                      ) : project.id === 4 ? (
+                        <><span className="text-black">UBER</span> Data Analytics Pipeline</>
+                      ) : project.id === 5 ? (
+                        <><span className="font-bold">STOCKS</span> Market Kafka Real-Time Pipeline</>
+                      ) : project.id === 6 ? (
+                        <><span className="text-red-500 font-bold">YOUTUBE</span> Data Engineering Analysis</>
+                      ) : project.id === 1 ? (
+                        <>Smart City Traffic & Anomaly Detection</>
+                      ) : (
+                        project.title
+                      )}
                     </h3>
-                    <p className="text-foreground/80 text-sm leading-relaxed mb-4">
+                    <p className={`text-xs md:text-sm leading-relaxed mb-4 transition-colors ${
+                      project.id === 3 
+                        ? 'text-black'
+                        : 'text-foreground/80'
+                    }`}>
                       {project.description}
                     </p>
                   </div>
 
                   {/* Hover Content */}
                   <div className={`transition-all duration-500 ${
-                    hoveredProject === project.id ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+                    hoveredProject === project.id ? 'translate-y-0 opacity-100' : 'translate-y-4 md:translate-y-8 opacity-0'
                   }`}>
                     {/* Specs Grid */}
                     <div className="grid grid-cols-2 gap-2 mb-4">
@@ -173,14 +234,41 @@ export const ProjectsSection = () => {
 
                     {/* Action Buttons */}
                     <div className="flex gap-2">
-                      <Button variant="hero" size="sm" className="flex-1 text-xs">
-                        <Github className="w-3 h-3" />
-                        Code
-                      </Button>
-                      <Button variant="cosmic" size="sm" className="flex-1 text-xs">
-                        <ExternalLink className="w-3 h-3" />
-                        Demo
-                      </Button>
+                      {project.isOngoing ? (
+                        <Button variant="cosmic" size="sm" className="flex-1 text-xs" disabled>
+                          🚧 Ongoing
+                        </Button>
+                      ) : (
+                        <>
+                          {project.githubUrl && (
+                            <Button 
+                              variant="hero" 
+                              size="sm" 
+                              className="flex-1 text-xs"
+                              onClick={() => window.open(project.githubUrl, '_blank')}
+                            >
+                              <Github className="w-3 h-3" />
+                              Code
+                            </Button>
+                          )}
+                          {project.demoUrl && (
+                            <Button 
+                              variant="cosmic" 
+                              size="sm" 
+                              className="flex-1 text-xs"
+                              onClick={() => window.open(project.demoUrl, '_blank')}
+                            >
+                              <ExternalLink className="w-3 h-3" />
+                              Demo
+                            </Button>
+                          )}
+                          {!project.githubUrl && !project.demoUrl && (
+                            <Button variant="hero" size="sm" className="flex-1 text-xs" disabled>
+                              Coming Soon
+                            </Button>
+                          )}
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -189,9 +277,27 @@ export const ProjectsSection = () => {
           ))}
         </div>
 
+        {/* Learning Quote */}
+        <div className="text-center animate-fade-in mb-8" style={{ animationDelay: '0.8s' }}>
+          <div className="glassmorphism rounded-2xl p-8 max-w-4xl mx-auto">
+            <p className="text-2xl md:text-3xl font-light text-foreground/90 mb-4 italic">
+              "Projects may come and go, but learning is a continuous journey - 
+              <span className="text-primary font-medium"> every challenge shapes the engineer you become</span>"
+            </p>
+            <p className="text-lg text-foreground/70 font-light">
+              Embracing the process, one data pipeline at a time
+            </p>
+          </div>
+        </div>
+
         {/* View All Projects CTA */}
-        <div className="text-center animate-fade-in" style={{ animationDelay: '0.8s' }}>
-          <Button variant="shimmer" size="lg" className="font-semibold">
+        <div className="text-center animate-fade-in" style={{ animationDelay: '1s' }}>
+          <Button 
+            variant="shimmer" 
+            size="lg" 
+            className="font-semibold"
+            onClick={() => window.open('https://github.com/AKSHITHGOUD9', '_blank')}
+          >
             <Github className="w-5 h-5" />
             View All Projects
           </Button>

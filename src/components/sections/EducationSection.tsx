@@ -26,23 +26,23 @@ export const EducationSection = () => {
         {/* Education Timeline */}
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-accent transform md:-translate-x-0.5" />
+          <div className="absolute left-4 md:left-1/2 top-8 bottom-0 w-0.5 bg-gradient-to-b from-primary to-accent transform md:-translate-x-0.5" />
 
           {/* Current Education */}
           <div className="relative mb-16 animate-slide-in-left">
-            <div className="flex items-center mb-4">
+            <div className="flex items-center mb-4 mt-12">
               <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-primary rounded-full transform md:-translate-x-2 shadow-glow-primary" />
               <span className="ml-12 md:ml-0 md:absolute md:left-1/2 md:ml-8 text-sm text-primary font-medium bg-primary/10 px-3 py-1 rounded-full">
                 September 2023 - May 2025
               </span>
             </div>
             
-            <div className="ml-12 md:ml-0 md:w-1/2 md:ml-auto md:pl-8">
+            <div className="ml-12 md:ml-0 md:w-1/2 md:ml-auto md:pl-8 pt-8">
               <Card className="bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-cosmic">
-                <CardContent className="p-6">
+                <CardContent className="p-4 md:p-6">
                   {/* Company Logo */}
                   <div className="flex items-center justify-center gap-4 mb-4">
-                    <div className="w-16 h-16 rounded-lg p-2 flex items-center justify-center">
+                    <div className="w-12 h-12 md:w-16 md:h-16 rounded-lg p-2 flex items-center justify-center">
                       <img 
                         src="/lovable-uploads/UWM.png"
                         alt="University of Wisconsin"
@@ -50,9 +50,9 @@ export const EducationSection = () => {
                       />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-foreground">Master's in Information Science</h3>
-                      <p className="text-muted-foreground flex items-center gap-2">
-                        <MapPin className="w-4 h-4" />
+                      <h3 className="text-lg md:text-xl font-bold text-foreground">Master's in Information Science</h3>
+                      <p className="text-muted-foreground flex items-center gap-2 text-sm md:text-base">
+                        <MapPin className="w-3 h-3 md:w-4 md:h-4" />
                         University of Wisconsin-Madison
                       </p>
                     </div>
@@ -60,16 +60,16 @@ export const EducationSection = () => {
 
                   {/* Skills Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
-                    <Badge variant="secondary">Data Analysis</Badge>
-                    <Badge variant="secondary">Decision Making</Badge>
-                    <Badge variant="secondary">Data Visualization</Badge>
-                    <Badge variant="secondary">Database Management</Badge>
-                    <Badge variant="secondary">Project Management</Badge>
-                    <Badge variant="secondary">Product Management</Badge>
+                    <Badge variant="secondary" className="text-xs">Data Analysis</Badge>
+                    <Badge variant="secondary" className="text-xs">Decision Making</Badge>
+                    <Badge variant="secondary" className="text-xs">Data Visualization</Badge>
+                    <Badge variant="secondary" className="text-xs">Database Management</Badge>
+                    <Badge variant="secondary" className="text-xs">Project Management</Badge>
+                    <Badge variant="secondary" className="text-xs">Product Management</Badge>
                   </div>
 
                   {/* Description */}
-                  <p className="text-muted-foreground leading-relaxed mb-4">
+                  <p className="text-muted-foreground leading-relaxed mb-4 text-sm md:text-base">
                     I've completed my Master's degree in Information Science, where I came across the dynamic and ever-evolving 
                     field of information management, technology, and data analysis to gain a deep understanding of how information 
                     shapes our world and influences decision-making processes.
@@ -77,15 +77,15 @@ export const EducationSection = () => {
 
                   {/* Achievements */}
                   <div className="flex items-center gap-2 text-sm text-primary">
-                    <Award className="w-4 h-4" />
-                    <span>Focus: Data Science & Information Systems</span>
+                    <Award className="w-3 h-3 md:w-4 md:h-4" />
+                    <span className="text-xs md:text-sm">Focus: Data Science & Information Systems</span>
                   </div>
                 </CardContent>
               </Card>
             </div>
 
             {/* UWM Image positioned beside the Master's card */}
-            <div className="absolute left-0 top-0 flex items-center h-full">
+            <div className="absolute left-0 top-0 flex items-center h-full hidden md:block">
               <div className="relative group">
                 <div className="absolute -inset-3 bg-gradient-to-r from-primary to-accent rounded-full opacity-20 blur-md"></div>
                 <img 
@@ -99,19 +99,19 @@ export const EducationSection = () => {
 
           {/* Previous Education */}
           <div className="relative animate-slide-in-right">
-            <div className="flex items-center mb-4">
+            <div className="flex items-center mb-4 mt-12">
               <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-accent rounded-full transform md:-translate-x-2 shadow-glow-accent" />
               <span className="ml-12 md:ml-0 md:absolute md:left-1/2 md:ml-8 text-sm text-accent font-medium bg-accent/10 px-3 py-1 rounded-full">
                 July 2019 - May 2023
               </span>
             </div>
             
-            <div className="ml-12 md:ml-0 md:w-1/2 md:pr-8">
+            <div className="ml-12 md:ml-0 md:w-1/2 md:pr-8 pt-8">
               <Card className="bg-card/50 backdrop-blur-sm border-accent/20 hover:border-accent/40 transition-all duration-300 hover:shadow-cosmic">
-                <CardContent className="p-6">
+                <CardContent className="p-4 md:p-6">
                   {/* Company Logo */}
                   <div className="flex items-center justify-center gap-4 mb-4">
-                    <div className="w-16 h-16 rounded-lg p-2 flex items-center justify-center">
+                    <div className="w-12 h-12 md:w-16 md:h-16 rounded-lg p-2 flex items-center justify-center">
                       <img 
                         src="/lovable-uploads/HIT.png"
                         alt="Hindustan Institute of Technology"
@@ -119,9 +119,9 @@ export const EducationSection = () => {
                       />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-foreground">Bachelor of Technology in Computer Science Engineering</h3>
-                      <p className="text-muted-foreground flex items-center gap-2">
-                        <MapPin className="w-4 h-4" />
+                      <h3 className="text-lg md:text-xl font-bold text-foreground">Bachelor of Technology in Computer Science Engineering</h3>
+                      <p className="text-muted-foreground flex items-center gap-2 text-sm md:text-base">
+                        <MapPin className="w-3 h-3 md:w-4 md:h-4" />
                         Hindustan Institute of Technology and Science
                       </p>
                     </div>
@@ -129,27 +129,27 @@ export const EducationSection = () => {
 
                   {/* Skills */}
                   <div className="flex flex-wrap gap-2 mb-4">
-                    <Badge variant="outline">Software Development</Badge>
-                    <Badge variant="outline">Data Structures</Badge>
-                    <Badge variant="outline">Algorithms</Badge>
-                    <Badge variant="outline">Database Systems</Badge>
-                    <Badge variant="outline">Programming</Badge>
+                    <Badge variant="outline" className="text-xs">Software Development</Badge>
+                    <Badge variant="outline" className="text-xs">Data Structures</Badge>
+                    <Badge variant="outline" className="text-xs">Algorithms</Badge>
+                    <Badge variant="outline" className="text-xs">Database Systems</Badge>
+                    <Badge variant="outline" className="text-xs">Programming</Badge>
                   </div>
 
-                  <p className="text-muted-foreground leading-relaxed mb-4">
+                  <p className="text-muted-foreground leading-relaxed mb-4 text-sm md:text-base">
                     Built strong foundation in computer science fundamentals, programming languages, and software engineering principles that laid the groundwork for my data engineering career.
                   </p>
 
                   <div className="flex items-center gap-2 text-sm text-accent">
-                    <GraduationCap className="w-4 h-4" />
-                    <span>Foundation in Computer Science & Engineering</span>
+                    <GraduationCap className="w-3 h-3 md:w-4 md:h-4" />
+                    <span className="text-xs md:text-sm">Foundation in Computer Science & Engineering</span>
                   </div>
                 </CardContent>
               </Card>
             </div>
 
             {/* HIT Image positioned beside the Bachelor's card */}
-            <div className="absolute right-0 top-0 flex items-center h-full">
+            <div className="absolute right-0 top-0 flex items-center h-full hidden md:block">
               <div className="relative group">
                 <div className="absolute -inset-3 bg-gradient-to-r from-accent to-primary rounded-full opacity-20 blur-md"></div>
                 <img 

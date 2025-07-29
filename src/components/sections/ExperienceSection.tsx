@@ -12,13 +12,14 @@ export const ExperienceSection = () => {
       type: "Full-time",
       logo: "/lovable-uploads/UWM.png",
       achievements: [
-        "Developed full-stack archival catalog system using Django/PostgreSQL and React",
-        "Improved data discoverability and reduced search latency by 50%",
-        "Automated CSV ingestion into Snowflake via Pandas and Airflow",
-        "Built GCP-based PySpark pipelines for real-time dashboard insights",
-        "Set up Dockerized microservices with CI/CD pipelines"
+        "Built a modular data platform to explore historical poet archives using PySpark and Snowflake on GCP.",
+        "Automated catalog ingestion and API integration with Airflow + Power Automate — cut manual work by 30%.",
+        "Designed dbt-style pipelines to analyze poet bios, themes, and writing styles for deeper research insights.",
+        "Used Alteryx to clean messy archival data and support on-demand faculty research needs.",
+        "Set up Kafka streams to monitor 50M+ events in real time — boosted freshness and flagged anomalies faster.",
+        "Containerized all services with Docker for clean, scalable deployments."
       ],
-      skills: ["Django", "PostgreSQL", "React", "Snowflake", "GCP", "Docker", "Airflow"]
+      skills: ["PySpark", "Kafka", "Django", "PostgreSQL", "React", "Snowflake", "GCP", "Docker", "Airflow", "Alteryx"]
     },
     {
       title: "Data Analyst Intern (Business Optimization)",
@@ -28,13 +29,13 @@ export const ExperienceSection = () => {
       type: "Internship",
       logo: "/lovable-uploads/RecWell.png",
       achievements: [
-        "Designed Spark workflows to integrate sensor + ticketing data",
-        "Reduced Snowflake loads by 15% through optimized data processing",
-        "Connected Google Analytics with venue data, increasing monthly student attendance by 200+",
-        "Automated Tableau dashboards via Lambda, saving 3 hours/week in manual refreshes",
-        "Conducted A/B testing via Python and SQL, demonstrated 12% lift in engagement"
+        "Built real-time ETL pipelines with Azure Fabric, Airflow, and Spark to process sensor + ticketing data into Snowflake.",
+        "Automated data syncs using Power Automate and Alteryx — kept Power BI dashboards fresh and decision-ready.",
+        "Designed Power BI & Tableau dashboards to visualize peak hours and student traffic — improved space usage.",
+        "Ran A/B tests with SQL and Python to test messaging strategies — boosted student engagement by 12%+.",
+        "Created reusable Power BI dataflows and trained 5+ departments — enabled self-serve insights campus-wide."
       ],
-      skills: ["Apache Spark", "Snowflake", "Google Analytics", "Tableau", "Python", "SQL", "AWS Lambda"]
+      skills: [ "Azure Fabric", "Apache Spark", "Snowflake", "Google Analytics", "Power BI", "Python", "SQL", "Power Automate", "Alteryx"]
     },
     {
       title: "Data Science Intern",
@@ -45,12 +46,13 @@ export const ExperienceSection = () => {
       logo: "/lovable-uploads/SkillVertex.png",
       achievements: [
         "Built time-series models in Python/R for course demand forecasting",
-        "Improved accuracy by 8% across 10+ categories",
+        "Improved forecast accuracy by 8% across 10+ course categories",
         "Managed ETL pipelines on AWS Redshift for 2M+ learner records",
-        "Enhanced content curation workflows",
-        "Delivered interactive dashboards via PySpark + QuickSight"
+        "Enhanced backend workflows for content curation and delivery",
+        "Delivered interactive dashboards via PySpark + QuickSight",
+        "Boosted campaign CTR by 12% using real-time Kafka sentiment analysis"
       ],
-      skills: ["Python", "R", "AWS Redshift", "PySpark", "QuickSight", "Time Series Analysis"]
+      skills: ["Python", "R", "AWS Redshift", "PySpark", "ETL", "Kafka", "QuickSight", "Time Series Analysis"]
     },
     {
       title: "Data Engineering - Trainee", 
@@ -60,12 +62,14 @@ export const ExperienceSection = () => {
       type: "Training Program",
       logo: "/lovable-uploads/DataNest.png",
       achievements: [
-        "Worked on building Python-based ETL pipelines and Django APIs for PostgreSQL and Snowflake data integration",
-        "Assisted in deploying Docker/Kubernetes microservices on AWS",
-        "Set up Kafka-Apache Airflow workflows for real-time log processing",
-        "Contributed to Power BI/Tableau dashboards and collaborated on designing GCP-based data lakes using BigQuery"
+        "Developed Python ETL pipelines and Django APIs for data transfer",
+        "Migrated and transformed data across PostgreSQL and Snowflake",
+        "Set up Kafka + Airflow pipelines for real-time business metrics",
+        "Built Power BI and Tableau dashboards for business teams",
+        "Contributed to GCP data lake architecture using BigQuery",
+        "Supported scalable analytics and automated reporting workflows"
       ],
-      skills: ["Python", "Django", "PostgreSQL", "Snowflake", "Docker", "Kubernetes", "Kafka", "BigQuery"]
+      skills: ["Django", "PostgreSQL", "Tableau", "BigQuery"]
     }
   ];
 

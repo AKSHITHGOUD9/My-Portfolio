@@ -1,20 +1,23 @@
 import { Button } from "@/components/ui/button";
-import { FileText } from "lucide-react";
+import { FileText, Menu, X } from "lucide-react";
 import akshithName from "@/assets/akshith-name.png";
 import { useAnalytics } from "@/hooks/use-analytics";
+import { useState } from "react";
 
 export const Navigation = () => {
   const { trackButtonClick, trackDownload } = useAnalytics();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: 'smooth' });
     trackButtonClick(`nav_${id}`);
+    setIsMenuOpen(false); // Close menu on mobile after clicking
   };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent">
-      <div className="container mx-auto px-6 py-3 flex items-center justify-between">
+      <div className="container mx-auto px-4 md:px-6 py-3 flex items-center justify-between">
         {/* Logo - left */}
         <div className="flex items-center">
           <button 
@@ -24,19 +27,19 @@ export const Navigation = () => {
             <img 
               src={akshithName} 
               alt="Akshith" 
-              className="h-24 object-contain opacity-100 drop-shadow-xl"
+              className="h-16 md:h-24 object-contain opacity-100 drop-shadow-xl"
             />
           </button>
         </div>
 
-        {/* Navigation Links - Centered, pill-shaped, single group */}
-        <div className="flex-1 flex justify-center">
+        {/* Desktop Navigation Links */}
+        <div className="hidden md:flex flex-1 justify-center">
           <div className="flex items-center rounded-full border border-white/40 bg-black/40 backdrop-blur-md px-10 py-3 gap-8 shadow-lg">
             <button 
               onClick={() => scrollToSection('projects')}
               className="text-white text-lg font-semibold px-4 py-1 focus:outline-none hover:text-primary transition-all duration-300 relative group"
             >
-              <span>Work</span>
+              <span>Projects</span>
               <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></div>
             </button>
             <button 
@@ -63,8 +66,18 @@ export const Navigation = () => {
           </div>
         </div>
 
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="text-white p-2 rounded-full bg-black/40 backdrop-blur-md border border-white/20"
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+
         {/* Resume Button - right */}
-        <div className="flex items-center">
+        <div className="hidden md:flex items-center">
           <a 
             href="https://drive.google.com/file/d/1ROnv6Chs7wFZfkokalR6U2Tf6R5Fvy3Y/view?usp=sharing" 
             target="_blank" 
@@ -87,6 +100,50 @@ export const Navigation = () => {
           </a>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 right-0 bg-black/90 backdrop-blur-md border-t border-white/20">
+          <div className="container mx-auto px-4 py-4 space-y-3">
+            <button 
+              onClick={() => scrollToSection('projects')}
+              className="w-full text-left text-white text-lg font-semibold py-3 px-4 rounded-lg hover:bg-white/10 transition-all duration-300"
+            >
+              Work
+            </button>
+            <button 
+              onClick={() => scrollToSection('experience')}
+              className="w-full text-left text-white text-lg font-semibold py-3 px-4 rounded-lg hover:bg-white/10 transition-all duration-300"
+            >
+              Experience
+            </button>
+            <button 
+              onClick={() => scrollToSection('education')}
+              className="w-full text-left text-white text-lg font-semibold py-3 px-4 rounded-lg hover:bg-white/10 transition-all duration-300"
+            >
+              Education
+            </button>
+            <button 
+              onClick={() => scrollToSection('about')}
+              className="w-full text-left text-white text-lg font-semibold py-3 px-4 rounded-lg hover:bg-white/10 transition-all duration-300"
+            >
+              About
+            </button>
+            <div className="pt-2 border-t border-white/20">
+              <a 
+                href="https://drive.google.com/file/d/1ROnv6Chs7wFZfkokalR6U2Tf6R5Fvy3Y/view?usp=sharing" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                onClick={() => trackDownload('resume')}
+                className="flex items-center text-white text-lg font-semibold py-3 px-4 rounded-lg hover:bg-white/10 transition-all duration-300"
+              >
+                <FileText className="w-5 h-5 mr-3" />
+                Resume
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
