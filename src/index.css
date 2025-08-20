@@ -1,0 +1,276 @@
+/* stylelint-disable-next-line at-rule-no-unknown */
+@tailwind base;
+/* stylelint-disable-next-line at-rule-no-unknown */
+@tailwind components;
+/* stylelint-disable-next-line at-rule-no-unknown */
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Cosmic Data Theme - Dark space-inspired design */
+    --background: 220 15% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 225 20% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 225 20% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 258 90% 66%;
+    --primary-foreground: 220 15% 6%;
+
+    --secondary: 225 15% 12%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 225 15% 15%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 290 100% 70%;
+    --accent-foreground: 220 15% 6%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 225 15% 18%;
+    --input: 225 15% 18%;
+    --ring: 258 90% 66%;
+
+    --radius: 0.75rem;
+
+    /* Enhanced cosmic gradients and effects */
+    --gradient-cosmic: linear-gradient(135deg, hsl(258 90% 66%), hsl(290 100% 70%));
+    --gradient-space: linear-gradient(180deg, hsl(220 15% 6%), hsl(225 20% 10%));
+    --gradient-hero: radial-gradient(ellipse at center, hsl(258 90% 66% / 0.2), transparent 70%);
+    --gradient-glass: linear-gradient(135deg, hsl(258 90% 66% / 0.1), hsl(290 100% 70% / 0.05));
+
+    /* Enhanced glow effects */
+    --glow-primary: 0 0 40px hsl(258 90% 66% / 0.6);
+    --glow-accent: 0 0 30px hsl(290 100% 70% / 0.5);
+    --glow-gentle: 0 0 20px hsl(258 90% 66% / 0.3);
+    --shadow-cosmic: 0 15px 50px -15px hsl(258 90% 66% / 0.4);
+    --shadow-glass: 0 8px 32px 0 hsl(258 90% 66% / 0.1);
+
+    /* Advanced transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-gentle: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .dark {
+    /* Use same theme - this portfolio is inherently dark */
+    --background: 225 12% 8%;
+    --foreground: 210 40% 98%;
+    --card: 225 20% 12%;
+    --card-foreground: 210 40% 98%;
+    --popover: 225 20% 12%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 225 12% 8%;
+    --secondary: 225 15% 15%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 225 15% 15%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 142 76% 36%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 225 15% 20%;
+    --input: 225 15% 20%;
+    --ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background-image: url('/src/assets/cosmic-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:drop-shadow-glow-primary;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 15px hsl(var(--primary) / 0.6);
+  }
+
+  .bg-glow {
+    @apply relative;
+  }
+
+  .bg-glow::before {
+    content: '';
+    @apply absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300;
+    background: var(--gradient-glass);
+  }
+
+  .bg-glow:hover::before {
+    @apply opacity-100;
+  }
+
+  .glassmorphism {
+    @apply bg-card/20 backdrop-blur-md border border-primary/20;
+  }
+
+  .glassmorphism-hover {
+    @apply hover:bg-card/30 hover:border-primary/40 hover:shadow-glass;
+  }
+
+  .drop-shadow-glow-primary {
+    filter: drop-shadow(0 0 12px hsl(var(--primary) / 0.7));
+  }
+
+  .drop-shadow-glow-accent {
+    filter: drop-shadow(0 0 10px hsl(var(--accent) / 0.6));
+  }
+
+  .cosmic-bg {
+    background:
+      radial-gradient(ellipse at top, hsl(258 90% 66% / 0.15), transparent 50%),
+      radial-gradient(ellipse at bottom, hsl(290 100% 70% / 0.1), transparent 50%),
+      linear-gradient(180deg, hsl(220 15% 6%), hsl(225 20% 8%));
+  }
+}
+
+@keyframes scroll-x {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-x {
+  animation: scroll-x 200s linear infinite;
+}
+
+@keyframes employer-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-employer-scroll {
+  animation: employer-scroll 30s linear infinite;
+}
+
+@keyframes float-resume {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float-resume {
+  animation: float-resume 3s ease-in-out infinite;
+}
+
+@keyframes float-gentle {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.animate-float-gentle {
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes twinkle {
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  53%,
+  80%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    transform: translate3d(0, -8px, 0);
+  }
+
+  70% {
+    transform: translate3d(0, -4px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
