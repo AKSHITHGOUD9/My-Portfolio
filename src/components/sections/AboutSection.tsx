@@ -5,13 +5,15 @@ import { Award, Download, Mail, Linkedin, Github, Instagram } from "lucide-react
 export const AboutSection = () => {
 
   const skills = {
-    "Languages & Scripting": ["Python", "Java", "Shell Scripting", "SQL", "T-SQL"],
-    "Databases & Warehouses": ["MySQL", "PostgreSQL", "MongoDB", "Redis", "Snowflake", "SQL Server", "SSMS"],
-    "Big Data & Processing": ["PySpark", "Apache Airflow", "Kafka", "Azure Data Lake", "Azure Stream Analytics", "Azure Synapse Analytics", "Databricks"],
-    "Cloud & DevOps": ["AWS (S3, EC2, Lambda, RDS, Glue)", "Azure (Microsoft Fabric, Data Factory, OneLake)", "GCP (BigQuery, Cloud Functions)", "Docker", "Terraform", "Azure DevOps", "Git"],
-    "Visualization & BI": ["Tableau", "Power BI", "Amazon QuickSight", "D3.js"],
-    "Libraries & Tools": ["Pandas", "NumPy", "Scikit-learn", "XGBoost", "Selenium", "Polars", "Matplotlib", "Seaborn", "spaCy", "NLTK", "Transformers"],
-    "Web & Frameworks": ["Django", "Supabase", "React", "HTML/CSS"]
+    "Languages & Scripting": ["TypeScript", "Python", "JavaScript", "Go", "SQL", "C++"],
+    "Frontend": ["React", "React Native", "Next.js", "Tailwind CSS", "Material UI", "Vite"],
+    "Backend & APIs": ["Node.js", "FastAPI", "Django", "GraphQL", "tRPC", "REST", "Express"],
+    "Databases & Warehouses": ["PostgreSQL", "MongoDB", "Redis", "Snowflake", "SQL Server", "Supabase"],
+    "Big Data & Processing": ["PySpark", "Apache Airflow", "Kafka", "Azure Data Lake", "Azure Synapse Analytics", "Databricks", "dbt"],
+    "Cloud & DevOps": ["AWS (Lambda, S3, ECS, RDS)", "Azure (Data Factory, Synapse, Fabric)", "GCP (BigQuery, Cloud Run)", "Docker", "Terraform", "GitHub Actions", "CI/CD"],
+    "AI & Automation": ["LangChain", "OpenAI API", "Vercel AI SDK", "GPT-4", "Vector Databases", "Embedding Models", "Prompt Engineering"],
+    "Visualization & BI": ["Tableau", "Power BI", "Amazon QuickSight", "D3.js", "Looker Studio"],
+    "Tools & Libraries": ["Pandas", "NumPy", "Scikit-learn", "XGBoost", "Selenium", "Polars", "spaCy", "NLTK", "Transformers", "Stripe"]
   };
 
   const certifications = [
@@ -57,9 +59,7 @@ export const AboutSection = () => {
             About <span className="bg-gradient-cosmic bg-clip-text text-transparent">Me</span>
           </h2>
           <p className="text-xl text-foreground/90 max-w-3xl mx-auto leading-relaxed drop-shadow-sm animate-fade-in">
-            I'm a passionate Data Engineer with expertise in building end-to-end data platforms, real-time pipelines, 
-            and interactive dashboards. I enjoy bringing structure to messy data through innovative solutions across 
-            AWS, GCP, and Microsoft Fabric ecosystems.
+            Full Stack & AI Systems Engineer with 4+ years of experience designing and shipping end-to-end intelligent systems, from cloud-native APIs to LLM-powered automation. I thrive in high-impact teams where autonomy and speed matter, blending backend reliability with AI innovation. Passionate about creating the backbone for AI-first applications.
           </p>
         </div>
 
@@ -111,7 +111,7 @@ export const AboutSection = () => {
           </p>
           <div className="flex items-center justify-center gap-4">
             <a 
-              href="https://drive.google.com/file/d/1ROnv6Chs7wFZfkokalR6U2Tf6R5Fvy3Y/view?usp=sharing"
+              href="https://docs.google.com/document/d/1h3eTgRWiDzt64Za53lILQJ6t413rEZLKZtsDkPVc2QA/edit?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               style={{display: 'inline-flex', alignItems: 'center', padding: '12px 24px', backgroundColor: '#3b82f6', color: 'white', borderRadius: '8px', textDecoration: 'none', fontWeight: 'bold', position: 'relative', zIndex: 10}}

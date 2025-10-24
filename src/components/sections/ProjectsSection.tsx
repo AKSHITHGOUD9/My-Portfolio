@@ -10,23 +10,54 @@ export const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      title: "Smart City Traffic & Anomaly Detection",
-      description: "Real-time traffic monitoring system with streaming analytics, anomaly detection, and intelligent alerting for smart city infrastructure using Kafka, Spark, and ML pipelines.",
-      image: "/lovable-uploads/Traffic.mp4",
-      tags: ["Kafka", "Spark", "ML", "Docker", "Kubernetes"],
-      type: "Real-Time Analytics",
-      githubUrl: null,
-      demoUrl: null,
-      isOngoing: true,
+      title: "Moodify",
+      description: "AI-powered music discovery platform using Spotify API, OpenAI embeddings, and collaborative filtering to create personalized playlists by mood and listening context. Microservice architecture with React frontend, FastAPI backend, and Redis caching for sub-200ms recommendations.",
+      image: "/lovable-uploads/Spotify.mp4",
+      tags: ["React", "FastAPI", "OpenAI", "Spotify API", "Redis", "Azure ML"],
+      type: "AI/ML Engineering",
+      githubUrl: "https://github.com/AKSHITHGOUD9/Moodify",
+      demoUrl: "https://moodify-topaz.vercel.app/",
       specs: {
-        volume: "Real-Time Streaming",
-        latency: "Sub-second Processing",
-        reliability: "ML Anomaly Detection",
-        scalability: "Cloud-Native Architecture"
+        volume: "Multi-User Personalization",
+        latency: "Sub-200ms Inference",
+        reliability: "ML Model Training",
+        scalability: "Microservice Architecture"
       }
     },
     {
       id: 2,
+      title: "Financial Document Classifier",
+      description: "Intelligent document classification system leveraging LangChain, OpenAI GPT-4, and scikit-learn to categorize invoices, contracts, and balance sheets with >94% accuracy. Features auto-labeling and validation pipelines using AWS S3 triggers + Lambda.",
+      image: "/lovable-uploads/FDC.png",
+      tags: ["LangChain", "GPT-4", "FastAPI", "PostgreSQL", "AWS Lambda", "NLP"],
+      type: "AI/NLP Pipeline",
+      githubUrl: "https://github.com/AKSHITHGOUD9/financial-doc-classifier",
+      demoUrl: null,
+      specs: {
+        volume: "Document Classification",
+        latency: "Scalable Ingestion",
+        reliability: "94%+ Accuracy",
+        scalability: "AWS Serverless"
+      }
+    },
+    {
+      id: 3,
+      title: "Gmail Automation Agent",
+      description: "LLM-powered email automation agent using LangChain and OpenAI API for parsing, categorizing, and auto-responding to high-volume Gmail inboxes. Integrated Vercel AI SDK for prompt orchestration with sentiment analysis and rule-based logic for contextual replies.",
+      image: "/lovable-uploads/Gmail.mp4",
+      tags: ["LangChain", "OpenAI", "Gmail API", "AWS Lambda", "Vercel AI SDK", "Python"],
+      type: "AI Workflow Automation",
+      githubUrl: "https://github.com/AKSHITHGOUD9/Gmail-Automation",
+      demoUrl: null,
+      specs: {
+        volume: "Email Automation",
+        latency: "Real-Time Processing",
+        reliability: "Context-Aware Replies",
+        scalability: "Lambda Deployment"
+      }
+    },
+    {
+      id: 4,
       title: "Netflix Movie Analytics Pipeline",
       description: "Built a scalable analytics pipeline using dbt, Snowflake, and Amazon S3 to transform raw movie data into clean, analytics-ready tables with automated data quality tests.",
       image: "/lovable-uploads/Netflix.mp4",
@@ -42,7 +73,7 @@ export const ProjectsSection = () => {
       }
     },
     {
-      id: 3,
+      id: 5,
       title: "Paris Olympic Azure Analytics",
       description: "Built comprehensive analytics platform for Paris Olympics data using Azure services to process and analyze athlete, medal, venue, and schedule information for sports insights.",
       image: "/lovable-uploads/Paris-Azure.mp4",
@@ -58,7 +89,7 @@ export const ProjectsSection = () => {
       }
     },
     {
-      id: 4,
+      id: 6,
       title: "Uber Data Analytics Pipeline",
       description: "Built modern data engineering pipeline using GCP, Mage AI, and BigQuery to process Uber trip data for analytics and visualization with Looker Studio.",
       image: "/lovable-uploads/uber.mp4",
@@ -74,7 +105,7 @@ export const ProjectsSection = () => {
       }
     },
     {
-      id: 5,
+      id: 7,
       title: "Stock Market Kafka Real-Time Pipeline",
       description: "Built end-to-end real-time data engineering pipeline using Apache Kafka, AWS services, and Python to process live stock market data for analytics.",
       image: "/lovable-uploads/Stocks.mp4",
@@ -90,7 +121,7 @@ export const ProjectsSection = () => {
       }
     },
     {
-      id: 6,
+      id: 8,
       title: "YouTube Data Engineering Analysis",
       description: "Developed comprehensive data pipeline using AWS services to analyze YouTube trending videos data with ETL processing and business intelligence.",
       image: "/lovable-uploads/Youtube.mp4",
@@ -175,33 +206,43 @@ export const ProjectsSection = () => {
                     <Badge variant="secondary" className="mb-3 glassmorphism text-primary border-primary/30 font-medium text-xs">
                       {project.type}
                     </Badge>
-                    <h3 className={`text-lg md:text-xl font-semibold mb-3 transition-colors ${
-                      project.id === 3 
-                        ? 'text-primary' 
+                    <h3 className={`text-lg md:text-xl font-semibold mb-3 transition-all duration-300 ${
+                      project.id === 1 
+                        ? 'text-white group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-600 group-hover:bg-clip-text group-hover:text-transparent' 
                         : project.id === 2
-                        ? 'text-foreground group-hover:text-primary'
+                        ? 'bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent'
+                        : project.id === 3
+                        ? 'text-black group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-600 group-hover:bg-clip-text group-hover:text-transparent'
                         : project.id === 4
-                        ? 'text-foreground group-hover:text-black'
+                        ? 'text-red-600'
+                        : project.id === 5
+                        ? 'text-black'
                         : 'text-foreground group-hover:text-primary'
                     }`}>
                       {project.id === 3 ? (
-                        <>Paris <span className="text-blue-500">O</span><span className="text-black">l</span><span className="text-red-500">y</span><span className="text-yellow-500">m</span><span className="text-green-500">p</span><span className="text-blue-500">i</span><span className="text-black">c</span> Azure Analytics</>
+                        <>Gmail Automation Agent</>
                       ) : project.id === 2 ? (
-                        <><span className="text-red-600">NETFLIX</span> Movie Analytics Pipeline</>
+                        <>Financial Document Classifier</>
                       ) : project.id === 4 ? (
-                        <><span className="text-black">UBER</span> Data Analytics Pipeline</>
+                        <><span className="text-red-600 font-bold">NETFLIX</span> Movie Analytics Pipeline</>
                       ) : project.id === 5 ? (
-                        <><span className="font-bold">STOCKS</span> Market Kafka Real-Time Pipeline</>
+                        <><span className="text-blue-500">P</span><span className="text-black">a</span><span className="text-red-500">r</span><span className="text-yellow-500">i</span><span className="text-green-500">s</span> <span className="text-blue-600">O</span><span className="text-black">l</span><span className="text-red-600">y</span><span className="text-yellow-600">m</span><span className="text-green-600">p</span><span className="text-blue-600">i</span><span className="text-black">c</span> <span className="text-black">Azure Analytics</span></>
                       ) : project.id === 6 ? (
+                        <><span className="text-black">UBER</span> Data Analytics Pipeline</>
+                      ) : project.id === 7 ? (
+                        <><span className="font-bold">STOCKS</span> Market Kafka Real-Time Pipeline</>
+                      ) : project.id === 8 ? (
                         <><span className="text-red-500 font-bold">YOUTUBE</span> Data Engineering Analysis</>
                       ) : project.id === 1 ? (
-                        <>Smart City Traffic & Anomaly Detection</>
+                        <>Moodify</>
                       ) : (
                         project.title
                       )}
                     </h3>
                     <p className={`text-xs md:text-sm leading-relaxed mb-4 transition-colors ${
-                      project.id === 3 
+                      project.id === 1
+                        ? 'line-clamp-3'
+                        : project.id === 3 || project.id === 5
                         ? 'text-black'
                         : 'text-foreground/80'
                     }`}>
@@ -214,8 +255,8 @@ export const ProjectsSection = () => {
                     hoveredProject === project.id ? 'translate-y-0 opacity-100' : 'translate-y-4 md:translate-y-8 opacity-0'
                   }`}>
                     {/* Specs Grid */}
-                    <div className="grid grid-cols-2 gap-2 mb-4">
-                      {Object.entries(project.specs).slice(0, 4).map(([key, value]) => (
+                    <div className={`grid ${project.id === 1 ? 'grid-cols-2 gap-2' : 'grid-cols-2 gap-2'} mb-2 md:mb-3`}>
+                      {Object.entries(project.specs).slice(0, project.id === 1 ? 2 : 4).map(([key, value]) => (
                         <div key={key} className="glassmorphism rounded-md p-2">
                           <div className="text-xs text-primary uppercase tracking-wide font-medium">{key}</div>
                           <div className="text-xs text-foreground/90 font-medium">{value}</div>
@@ -224,8 +265,8 @@ export const ProjectsSection = () => {
                     </div>
 
                     {/* Tech Stack */}
-                    <div className="flex flex-wrap gap-1 mb-4">
-                      {project.tags.slice(0, 3).map((tag) => (
+                    <div className="flex flex-wrap gap-1 mb-3 md:mb-3">
+                      {project.tags.slice(0, project.id === 1 ? 3 : 3).map((tag) => (
                         <Badge key={tag} variant="outline" className="text-xs glassmorphism text-foreground/80 border-primary/20">
                           {tag}
                         </Badge>
@@ -234,40 +275,32 @@ export const ProjectsSection = () => {
 
                     {/* Action Buttons */}
                     <div className="flex gap-2">
-                      {project.isOngoing ? (
-                        <Button variant="cosmic" size="sm" className="flex-1 text-xs" disabled>
-                          🚧 Ongoing
+                      {project.githubUrl && (
+                        <Button 
+                          variant="hero" 
+                          size="sm" 
+                          className="flex-1 text-xs"
+                          onClick={() => window.open(project.githubUrl, '_blank')}
+                        >
+                          <Github className="w-3 h-3" />
+                          Code
                         </Button>
-                      ) : (
-                        <>
-                          {project.githubUrl && (
-                            <Button 
-                              variant="hero" 
-                              size="sm" 
-                              className="flex-1 text-xs"
-                              onClick={() => window.open(project.githubUrl, '_blank')}
-                            >
-                              <Github className="w-3 h-3" />
-                              Code
-                            </Button>
-                          )}
-                          {project.demoUrl && (
-                            <Button 
-                              variant="cosmic" 
-                              size="sm" 
-                              className="flex-1 text-xs"
-                              onClick={() => window.open(project.demoUrl, '_blank')}
-                            >
-                              <ExternalLink className="w-3 h-3" />
-                              Demo
-                            </Button>
-                          )}
-                          {!project.githubUrl && !project.demoUrl && (
-                            <Button variant="hero" size="sm" className="flex-1 text-xs" disabled>
-                              Coming Soon
-                            </Button>
-                          )}
-                        </>
+                      )}
+                      {project.demoUrl && (
+                        <Button 
+                          variant="cosmic" 
+                          size="sm" 
+                          className="flex-1 text-xs"
+                          onClick={() => window.open(project.demoUrl, '_blank')}
+                        >
+                          <ExternalLink className="w-3 h-3" />
+                          Demo
+                        </Button>
+                      )}
+                      {!project.githubUrl && !project.demoUrl && (
+                        <Button variant="hero" size="sm" className="flex-1 text-xs" disabled>
+                          Coming Soon
+                        </Button>
                       )}
                     </div>
                   </div>

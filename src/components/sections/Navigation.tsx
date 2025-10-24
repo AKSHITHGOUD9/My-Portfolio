@@ -79,7 +79,7 @@ export const Navigation = () => {
         {/* Resume Button - right */}
         <div className="hidden md:flex items-center">
           <a 
-            href="https://drive.google.com/file/d/1ROnv6Chs7wFZfkokalR6U2Tf6R5Fvy3Y/view?usp=sharing" 
+            href="https://docs.google.com/document/d/1h3eTgRWiDzt64Za53lILQJ6t413rEZLKZtsDkPVc2QA/edit?usp=sharing" 
             target="_blank" 
             rel="noopener noreferrer" 
             onClick={() => trackDownload('resume')}
