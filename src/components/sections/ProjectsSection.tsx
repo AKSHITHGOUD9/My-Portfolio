@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export const ProjectsSection = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
@@ -142,22 +143,33 @@ export const ProjectsSection = () => {
     <section id="projects" className="py-20 px-6 cosmic-bg">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
-        <div className="text-center mb-16 animate-fade-in">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
           <span className="bg-gradient-cosmic bg-clip-text text-transparent">Projects</span>
           </h2>
           <p className="text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed font-light">
             Transforming complex data challenges into elegant solutions through innovative engineering and design
           </p>
-        </div>
+        </motion.div>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
           {projects.map((project, index) => (
-            <Card 
+            <motion.div
               key={project.id}
-              className="group relative overflow-hidden glassmorphism glassmorphism-hover transition-all duration-700 hover:scale-105 animate-fade-in border-0"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+            <Card
+              className="group relative overflow-hidden glassmorphism glassmorphism-hover transition-all duration-700 hover:scale-105 border-0"
               onMouseEnter={() => setHoveredProject(project.id)}
               onMouseLeave={() => setHoveredProject(null)}
             >
@@ -307,11 +319,18 @@ export const ProjectsSection = () => {
                 </div>
               </CardContent>
             </Card>
+            </motion.div>
           ))}
         </div>
 
         {/* Learning Quote */}
-        <div className="text-center animate-fade-in mb-8" style={{ animationDelay: '0.8s' }}>
+        <motion.div
+          className="text-center mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
           <div className="glassmorphism rounded-2xl p-8 max-w-4xl mx-auto">
             <p className="text-2xl md:text-3xl font-light text-foreground/90 mb-4 italic">
               "Projects may come and go, but learning is a continuous journey - 
@@ -321,10 +340,16 @@ export const ProjectsSection = () => {
               Embracing the process, one data pipeline at a time
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* View All Projects CTA */}
-        <div className="text-center animate-fade-in" style={{ animationDelay: '1s' }}>
+        <motion.div
+          className="text-center"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+        >
           <Button 
             variant="shimmer" 
             size="lg" 
@@ -334,7 +359,7 @@ export const ProjectsSection = () => {
             <Github className="w-5 h-5" />
             View All Projects
           </Button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
